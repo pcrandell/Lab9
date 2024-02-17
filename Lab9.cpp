@@ -8,6 +8,22 @@
 using namespace std;
 
 int main() {
-
+    int num1 = 0, num2 = 1, num3, fibNumber, index = 0;
+    cout << "Enter the number of Fibonacci terms to generate: ";
+    cin >> fibNumber;
+    for (index = 1; index <= fibNumber; index++) {
+        if (index == 1) {
+            cout << num1 << ", ";
+            continue;
+        }
+        if (index == 2) {
+            cout << num2 << ", ";
+            continue;
+        }
+        num3 = num1 + num2;
+        num1 = num2;
+        num2 = num3;
+        cout << num3 << ", ";
+    }
     return 0;
 }
